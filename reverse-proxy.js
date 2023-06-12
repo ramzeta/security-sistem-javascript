@@ -42,6 +42,11 @@ const server = http.createServer((req, res) => {
   proxy.web(req, res);
 });
 
+function fetchResponseFromServer(req, res) {
+  // Código para obtener la respuesta del servidor
+  // (por ejemplo, usando http o axios)
+}
+
 // Maneja los errores del proxy
 proxy.on('error', (err, req, res) => {
   console.error('Error en el proxy:', err);
