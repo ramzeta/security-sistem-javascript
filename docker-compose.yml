@@ -6,7 +6,27 @@ services:
       dockerfile: dockerfile
     ports:
       -80:80
+    depends_on:
+      - lb-app1
+      - lb-app2
 
+  lb-app1:
+    build:
+      context: .
+      dockerfile: Dockerfile-app1
+    ports:
+      - 3000
+    networks:
+      - lb-network
+
+  lb-app2:
+    build:
+      context: .
+      dockerfile: Dockerfile-app2
+    ports:
+      - 3000
+    networks:
+      - lb-network
 
 networks:
   lb-net
