@@ -10,7 +10,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "http-proxy": "^1.18.1",
-    "lru-cache": "^9.1.2"
+    "http-proxy": "^1.18.1"
   }
 }
